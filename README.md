@@ -1,14 +1,14 @@
 # TalentSpottingAI: build notes
 
-Public notes on a full applicant tracking system I built solo with AI-assisted development. The production code is private; this repo documents what was built and how.
+Public notes on an AI-powered career platform I built solo with AI-assisted development. The production code is private; this repo documents what was built and how.
 
 ## What it is
 
-TalentSpottingAI is a recruitment platform connecting university students with employers: staffing pipelines, talent search, a job board, event management with QR check-ins, NLP-based skills extraction, 27 transactional email templates, and role-based dashboards for Students, Employers, Universities, and Admins.
+TalentSpottingAI connects university students with employers and universities on one platform. Students get a job board and AI-powered matching ("matches based on fit, not just keywords"), free forever. Employers get curated candidates from 40+ Greek universities, plus a built-in applicant tracking system: staffing pipelines, talent search, NLP-based skills extraction, and event management with QR check-ins. Universities get real placement analytics for their career offices. Four role-based dashboards (Student, Employer, University, Admin) and 27 transactional email templates tie it together.
 
 ## Status, honestly
 
-Developed July to December 2025. Launched early 2026 in a free-launch mode. Taken offline in April 2026 to eliminate roughly $50/month of infrastructure costs while there were no paying customers; the full deployment spec was captured first so it can be relaunched, and a landing page remains live at [talentspottingai.com](https://talentspottingai.com). The numbers below were measured on the full product at hibernation, with a 100% test pass rate.
+Developed July to December 2025. Launched early 2026 in a free-launch mode. Taken offline in April 2026 to eliminate roughly $50/month of infrastructure costs while there were no paying customers; the full deployment spec was captured first so it can be relaunched, and a landing page with a waitlist is live at [talentspottingai.com](https://talentspottingai.com). The numbers below were measured on the full product at hibernation, with a 100% test pass rate.
 
 ## The numbers, and how they were counted
 
@@ -18,7 +18,7 @@ Measured at hibernation (April 2026): about 295K source lines plus 118K test lin
 
 ## Stack
 
-Next.js, React, and TypeScript on the frontend; Node.js and TypeScript on the backend; PostgreSQL with Prisma; Redis, including a Redis adapter for multi-instance Socket.IO; Stripe; Docker Compose for local development; GitHub Actions CI with sharded end-to-end runs; Sentry for error tracking; Resend for transactional email; Netlify for the landing page; DigitalOcean for the former staging environment.
+Next.js, React, and TypeScript on the frontend; Node.js and TypeScript on the backend; PostgreSQL with Prisma; Redis, including a Redis adapter for multi-instance Socket.IO; Clerk multi-role auth; Stripe; Docker Compose for local development; GitHub Actions CI with sharded end-to-end runs; Sentry for error tracking; Resend for transactional email; Netlify for the landing page; DigitalOcean for the former staging environment.
 
 ## How a non-developer shipped this
 
@@ -39,6 +39,6 @@ I am not a developer by trade. The project ran on Claude Code with a disciplined
 
 ## Links
 
-- Landing page: [talentspottingai.com](https://talentspottingai.com)
+- Landing page and waitlist: [talentspottingai.com](https://talentspottingai.com)
 - The live product I run: [yourjobremote.com](https://yourjobremote.com/en)
 - LinkedIn: [dimitris-chatz](https://www.linkedin.com/in/dimitris-chatz/)
